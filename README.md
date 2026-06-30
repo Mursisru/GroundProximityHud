@@ -1,4 +1,9 @@
+**Developer:** Mursisru
+
 # Ground Proximity HUD
+
+[![Nuclear Option](https://img.shields.io/badge/Game-Nuclear%20Option-blue)](https://store.steampowered.com/app/2168680/Nuclear_Option/) [![BepInEx 5](https://img.shields.io/badge/Loader-BepInEx%205-orange)](https://docs.bepinex.dev/) [![Version](https://img.shields.io/badge/Version-0.0.0-green)]() [![License](https://img.shields.io/badge/License-MIT-lightgrey)](LICENSE)
+
 
 BepInEx plugin for **Nuclear Option** that adds a central Flight HUD ground-proximity marker:
 
@@ -15,13 +20,18 @@ BepInEx plugin for **Nuclear Option** that adds a central Flight HUD ground-prox
 
 - Nuclear Option (Steam)
 - BepInEx 5 x64
-- BepInEx ConfigurationManager (optional)
 
 ## Install
 
-1. Get `GroundProximityHud_Engine.dll`.
+> [!IMPORTANT]
+> **BepInEx 5 (x64) required** - install [BepInEx](https://docs.bepinex.dev/) before this mod.
+
+1. Build **Release** and get `GroundProximityHud_Engine.dll`.
 2. Copy it to `Nuclear Option\BepInEx\plugins\`.
-3. Put GPH_Data in `Nuclear Option\BepInEx\plugins\`
+3. Put white PNGs (tinted in-game) in:
+   `Nuclear Option\BepInEx\plugins\GPH_Data\gph_grass.png`
+   `Nuclear Option\BepInEx\plugins\GPH_Data\gph_runway.png`
+   (834×62 recommended; legacy `GroundProximityHud\grass.png` / `runway.png` still work as fallback.)
 
 ## Configuration
 
@@ -40,6 +50,16 @@ File:
 - `Icons.UseHudColor` - use game HUD RGB (`PlayerSettings`) for tint (default true)
 - `Icons.MarkerColorHex` - tint when `UseHudColor` is false
 
+## Build
+
+References resolve via `NuclearOptionRoot` in `Directory.Build.props`.
+
+- default is Steam install path
+- for custom path copy `Directory.Build.user.props.example` to `Directory.Build.user.props` and set your folder
+
+Output:
+`GroundProximityHud_Engine\bin\Release\GroundProximityHud_Engine.dll`
+
 ## Manual test checklist
 
 1. Descend with gear up: grass texture (`gph_grass.png`) tinted green moves toward HUD center as AGL drops.
@@ -47,3 +67,9 @@ File:
 3. Climb above `MaxDisplayAglMeters`: marker should hide.
 4. Pause/open non-flight state (if `ShowOnlyWhenFlightControlsEnabled=true`): marker hides.
 5. With `GPH_Data` PNGs present and `UsePngOverrides=true`, restart: wide 834×62 art should display at configured `IconHeightPixels`.
+
+---
+
+## Keywords
+
+nuclear-option, bepinex, harmony, mod, groundproximityhud, csharp, unity
