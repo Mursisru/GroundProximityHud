@@ -8,12 +8,9 @@
 ---
 
 ## Critical warnings
-
 > [!IMPORTANT]
-> **BepInEx 5 (x64) required** - install [BepInEx](https://docs.bepinex.dev/articles/user_guide/installation/index.html) before this mod.
-
-> [!IMPORTANT]
-> **Install `GPH_Data` PNG pack** - place `gph_grass.png` and `gph_runway.png` in `BepInEx\plugins\GPH_Data\` (834x62 recommended) when `Icons.UsePngOverrides=true`.
+> - **BepInEx 5 (x64) required** - install [BepInEx](https://docs.bepinex.dev/articles/user_guide/installation/index.html) before this mod.
+> - **Install `GPH_Data` PNG pack** - place `gph_grass.png` and `gph_runway.png` in `BepInEx\plugins\GPH_Data\` (834x62 recommended) when `Icons.UsePngOverrides=true`.
 
 > [!NOTE]
 > **Marker is part of FlightHud canvas** - hidden when stock flight HUD is off (settings/pause).
