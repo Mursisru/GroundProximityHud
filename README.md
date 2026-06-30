@@ -5,19 +5,6 @@
 [![Nuclear Option](https://img.shields.io/badge/Game-Nuclear%20Option-blue)](https://store.steampowered.com/app/2168680/Nuclear_Option/) [![BepInEx 5](https://img.shields.io/badge/Loader-BepInEx%205-orange)](https://docs.bepinex.dev/) [![Version](https://img.shields.io/badge/Version-1.1.0-green)](https://github.com/Mursisru/GroundProximityHud/releases/tag/v1.1.0)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow)](https://github.com/Mursisru/GroundProximityHud/blob/main/LICENSE)
 
-
-BepInEx plugin for **Nuclear Option** that adds a central Flight HUD ground-proximity marker:
-
-- marker appears when approaching terrain (within configurable AGL range);
-- closer to ground -> marker moves closer to HUD center;
-- marker is always tinted green by default (`Icons.MarkerColorHex`);
-- marker is **part of the FlightHud canvas** (hidden when the stock flight HUD is off, e.g. settings/pause);
-- marker tint matches **Settings → HUD color** by default (`Icons.UseHudColor`);
-- vertical nudge via `General.ZeroAglDownShiftPixels` (default **16**);
-- hidden when **AGL < 0.3 m**; **50% transparency** when **AGL > 50 m**;
-- icon shape still switches between grass (gear up) and runway (gear down).
-
-
 ---
 
 ## Critical warnings
@@ -30,6 +17,18 @@ BepInEx plugin for **Nuclear Option** that adds a central Flight HUD ground-prox
 
 > [!NOTE]
 > **Marker is part of FlightHud canvas** - hidden when stock flight HUD is off (settings/pause).
+
+BepInEx plugin for **Nuclear Option** that adds a central Flight HUD ground-proximity marker:
+
+- marker appears when approaching terrain (within configurable AGL range);
+- closer to ground -> marker moves closer to HUD center;
+- marker is always tinted green by default (`Icons.MarkerColorHex`);
+- marker is **part of the FlightHud canvas** (hidden when the stock flight HUD is off, e.g. settings/pause);
+- marker tint matches **Settings → HUD color** by default (`Icons.UseHudColor`);
+- vertical nudge via `General.ZeroAglDownShiftPixels` (default **16**);
+- hidden when **AGL < 0.3 m**; **50% transparency** when **AGL > 50 m**;
+- icon shape still switches between grass (gear up) and runway (gear down).
+
 
 ## Install
 
