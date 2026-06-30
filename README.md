@@ -17,10 +17,19 @@ BepInEx plugin for **Nuclear Option** that adds a central Flight HUD ground-prox
 - hidden when **AGL < 0.3 m**; **50% transparency** when **AGL > 50 m**;
 - icon shape still switches between grass (gear up) and runway (gear down).
 
-## Requirements
 
-- Nuclear Option (Steam)
-- BepInEx 5 x64
+---
+
+## Critical warnings
+
+> [!IMPORTANT]
+> **BepInEx 5 (x64) required** - install [BepInEx](https://docs.bepinex.dev/articles/user_guide/installation/index.html) before this mod.
+
+> [!IMPORTANT]
+> **Install `GPH_Data` PNG pack** - place `gph_grass.png` and `gph_runway.png` in `BepInEx\plugins\GPH_Data\` (834x62 recommended) when `Icons.UsePngOverrides=true`.
+
+> [!NOTE]
+> **Marker is part of FlightHud canvas** - hidden when stock flight HUD is off (settings/pause).
 
 ## Install
 
@@ -68,6 +77,11 @@ Output:
 3. Climb above `MaxDisplayAglMeters`: marker should hide.
 4. Pause/open non-flight state (if `ShowOnlyWhenFlightControlsEnabled=true`): marker hides.
 5. With `GPH_Data` PNGs present and `UsePngOverrides=true`, restart: wide 834×62 art should display at configured `IconHeightPixels`.
+
+## Requirements
+
+- Nuclear Option (Steam)
+- BepInEx 5 x64
 
 ---
 
